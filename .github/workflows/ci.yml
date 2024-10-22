@@ -30,7 +30,7 @@ jobs:
       with:
         projectKey: java-ci-pipeline
         organization: deh-alba
-        token: ${{ secrets.SONAR_TOKEN }}
+        token: 4ebe32db1cd44e2ab0886272544d924fbcf0c93c
 
   deploy:
     needs: build
