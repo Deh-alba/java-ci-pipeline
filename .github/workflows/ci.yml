@@ -25,6 +25,12 @@ jobs:
     - name: Run tests
       run: mvn test
 
+    - name: Run SonarCloud scan
+      uses: sonarsource/sonarcloud-github-action@v1.5
+      with:
+        projectKey: java-ci-pipeline
+        organization: deh-alba
+        token: ${{ secrets.SONAR_TOKEN }}
 
   deploy:
     needs: build
